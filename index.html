@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Brush</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="js/jquery.js"></script>
+  <script src="js/picker.js"></script>
+</head>
+<body>
+<div id="divPickerHolder">
+    <div id="divPicker">
+        <div id="divPickerBG">
+            <img src="img/picker-bg.png" id="pickerBG" />
+        </div>
+        <div id="divPickerColor">
+            <img src="img/picker-color.png" id="pickerColor" />
+        </div>
+        <div class="clear"></div>
+        <div id="divPickerControls">
+            <div class="buttons">
+                <span class="btn btn-default" id="btnOk">Ok</span>
+            </div>
+            <div class="buttons">
+                <span class="btn btn-default" id="btnCancel">Cancel</span>
+            </div>
+            <div class="buttons">
+                <span id="colorSpot"></span>
+            </div>
+            <div class="buttons">
+                #<input type="text" id="hashColor" />;
+            </div>
+            
+        </div>
+    </div>
+</div>    
+</body>
+</html>

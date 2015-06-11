@@ -1,0 +1,76 @@
+body{
+    position: relative;
+}
+#divPickerHolder{
+    position: absolute;
+    width: 100%;
+    top: 2em;
+}
+#divPicker{
+    width: 289px;
+    border: 4px solid #333;
+    border-radius: 4px;
+    background: #333;
+    margin: 1em auto;
+    z-index: 100;
+    height: 312px;
+}
+#divPickerBG{
+    height: 256px;
+    margin-right: 5px;
+    float: left;
+}
+#pickerBG{
+    height: 256px;
+    background: red;
+    cursor: pointer;
+}
+#pickerColor{
+    cursor: pointer;
+}
+
+.clear{
+    clear: both;
+}
+
+#divPickerControls{
+    width:285px;
+    height: 48px;
+}
+
+#divPickerControls > .buttons{
+    float: left;
+}
+
+.buttons {
+    padding: 0.5em 0.4em;
+    margin: auto;
+    color: white;
+    height: 100%;
+    position: relative;
+}
+
+.buttons > span{
+    display: block;
+}
+
+.btn-default{
+    background: #eee;
+    margin-right: 0;
+}
+
+#hashColor{
+    color: black;
+    width: 4em;
+}
+.btn-default:hover{
+    background: lightblue;
+}
+
+#colorSpot{
+    height: 100%;
+    width: 48px;
+    background: red;
+    border:1px solid #ccc;
+    display: block;
+}
