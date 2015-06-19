@@ -1,45 +1,92 @@
+@font-face {
+  font-family: 'Cent';
+  src: url('fonts/Cent.eot');
+  src: url('fonts/Cent.eot?iefix') format('eot'),
+       url('fonts/Cent.ttf') format('truetype');
+}
 body{
     position: relative;
 }
+#title{
+    padding-top: 1em;
+}
+#munsell{
+    padding: 1em;
+}
+#title h2{
+    font-family: 'Cent';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3em;
+    
+}
 #divPickerHolder{
-    position: absolute;
+    height: auto;
     width: 100%;
-    top: 2em;
 }
 #divPicker{
-    width: 289px;
+    width: 292px;
     border: 4px solid #333;
     border-radius: 4px;
     background: #333;
-    margin: 1em auto;
+    margin: auto;
     z-index: 100;
-    height: 312px;
+    height: 368px;
 }
 #divPickerBG{
-    height: 256px;
-    margin-right: 5px;
+    height: 315px;
     float: left;
+    position: relative;
 }
 #pickerBG{
-    height: 256px;
-    background: red;
-    cursor: pointer;
+    height: 100%;
+    width: 255px;
+    background-color: #ff0000;
+}
+#divPickerColor{
+    position: relative;
+    float: right;
 }
 #pickerColor{
-    cursor: pointer;
+    height: 360px;
 }
-
 .clear{
     clear: both;
 }
 
 #divPickerControls{
-    width:285px;
-    height: 48px;
+    width:275px;
+    height: 40px;
 }
 
 #divPickerControls > .buttons{
     float: left;
+}
+
+#pointerBG{
+    margin-top: -4px;
+    margin-left: -4px;
+    position: absolute;
+    top: 0px;
+    left: 255px;
+    width: 8px;
+    height: 8px;
+    border-color: white;
+    border-width: 2px; 
+    border-style: solid;
+    border-radius: 4px;
+}
+
+#pointerColor{
+    margin-top: -3px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    border-color: #eee;
+    border-width: 2px; 
+    border-style: solid;
 }
 
 .buttons {
@@ -58,19 +105,68 @@ body{
     background: #eee;
     margin-right: 0;
 }
-
-#hashColor{
+.divHash{
+    padding: 0.7em 0.4em;
+}
+#colorHash{
     color: black;
-    width: 4em;
+    width: 5em;
+    text-align: center;
 }
 .btn-default:hover{
     background: lightblue;
 }
 
 #colorSpot{
-    height: 100%;
-    width: 48px;
+    margin-top: 2px;
+    height: 30px;
+    width: 90px;
     background: red;
     border:1px solid #ccc;
     display: block;
+}
+
+#values{
+    color: #333;
+    padding-bottom: 4em;
+}
+#values > div{
+    color: #333;
+}
+/*
+#values label{
+    float: left;
+}*/
+#randomColors{
+    padding: 1em 3em;
+}
+#randomColors div{
+    margin-top: 1em;
+}
+.rand-col{
+    height: 20px;
+}
+#repeat{
+    font-size: 1.4em;
+    display: inline-block;
+    cursor: pointer;
+}
+#repeat:hover{
+    color: #999;
+}
+#0{    background-color: teal; }
+#1{    background-color: red; }
+#2{    background-color: purple; }
+#3{    background-color: yellow; }
+#4{    background-color: brown; }
+#5{    background-color: blueviolet; }
+#6{    background-color: orange; }
+#7{    background-color: rosybrown; }
+#8{    background-color: darkseagreen; }
+#9{    background-color: green; }
+
+@media(min-width: 568px){
+    #title{
+        padding-top: 2em;
+    }
 }

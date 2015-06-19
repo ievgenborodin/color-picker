@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Brush</title>
+  <title>Color Picker</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
   <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
   <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -10,31 +10,116 @@
   <script src="js/picker.js"></script>
 </head>
 <body>
-<div id="divPickerHolder">
-    <div id="divPicker">
-        <div id="divPickerBG">
-            <img src="img/picker-bg.png" id="pickerBG" />
+<div class="container">
+    <div class="row" id="header">
+        <div class="col-xs-4 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2" id="munsell">
+            <img src="img/munsell.png" class="img-responsive">
         </div>
-        <div id="divPickerColor">
-            <img src="img/picker-color.png" id="pickerColor" />
+        <div id="title" class="col-xs-8 col-sm-7">
+            <h2>Color Picker</h2>
         </div>
-        <div class="clear"></div>
-        <div id="divPickerControls">
-            <div class="buttons">
-                <span class="btn btn-default" id="btnOk">Ok</span>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-3">
+            <div id="values">    
+                <div class="col-xs-2 col-sm-12">
+                    <label>hue: </label><div id="th">0</div><div class="clear"></div>
+                </div>
+                <div class="col-xs-2 col-sm-12">
+                <label>saturat: </label><div id="ts">0</div><div class="clear"></div>
+                </div>
+                <div class="col-xs-2 col-sm-12">
+                <label>value: </label><div id="tv">0</div><div class="clear"></div>
+                </div>
+                <div class="col-xs-2 col-sm-12">
+                <label>red: </label><div id="tr">0</div><div class="clear"></div>
+                </div>
+                <div class="col-xs-2 col-sm-12">
+                <label>green: </label><div id="tg">0</div><div class="clear"></div>
+                </div>
+                <div class="col-xs-2 col-sm-12">
+                <label>blue: </label><div id="tb">0</div>
+</div></div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-4">
+            <div id="divPickerHolder">
+                <div id="divPicker">
+                    <div id="divPickerBG">
+                        <img src="img/picker-bg.png" id="pickerBG" />
+                        <span id="pointerBG"></span>
+                    </div>
+                    <div id="divPickerColor">
+                        <img src="img/picker-color.png" id="pickerColor" />
+                        <span id="pointerColor"></span>
+                    </div>
+                    <div id="divPickerControls">
+                        <div class="buttons">
+                            <span class="btn btn-default" id="btnOk">Ok</span>
+                        </div>
+                        <div class="buttons">
+                            <span id="colorSpot"></span>
+                        </div>
+                        <div class="buttons divHash">
+                            #<input type="text" id="colorHash" />;
+                        </div>
+
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="row" id="randomColors">
+        <div class="col-xs-11 col-xs-offset-1 col-sm-10 col-sm-offset-2 col-md-9 col-md-offset-3">
+            <span id="repeat" class="glyphicon glyphicon-repeat"></span>
+            <div class="row">
+                <div id="0" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
             </div>
-            <div class="buttons">
-                <span class="btn btn-default" id="btnCancel">Cancel</span>
+            <div class="clear"></div>
+            <div class="row">
+                <div id="1" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
             </div>
-            <div class="buttons">
-                <span id="colorSpot"></span>
+            <div class="clear"></div>  
+            <div class="row">
+                <div id="2" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
             </div>
-            <div class="buttons">
-                #<input type="text" id="hashColor" />;
+            <div class="row">
+                <div id="3" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
             </div>
-            
+            <div class="row">
+                <div id="4" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
+            </div>
+            <div class="row">
+                <div id="5" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
+            </div>
+            <div class="row">
+                <div id="6" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
+            </div>
+            <div class="row">
+                <div id="7" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
+            </div>
+            <div class="row">
+                <div id="8" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
+            </div>
+            <div class="row">
+                <div id="9" class="rand-col col-xs-9 col-sm-8 col-md-6"></div>
+                <div class="hash col-xs-3 col-sm-2 col-md-2 col-lg-1">#346523</div>
+            </div>
         </div>
     </div>
 </div>    
+    
+
+    
+
+
 </body>
 </html>
