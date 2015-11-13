@@ -166,7 +166,29 @@ body{
 #9{    background-color: green; }
 
 @media(min-width: 568px){
-    #title{
-        padding-top: 2em;
-    }
+  #title{
+    padding-top: 2em;
+  }
+  #values{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;  
+  }
+}
+
+@media(min-width: 778px){
+  #values{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media(min-width: 1200px){
+  #divPicker{
+    margin-top: -40px;
+    margin-left: -20px;   
+  }
+  #randomColors{
+    margin-left: 20px;
+  }
 }
