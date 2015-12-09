@@ -51,11 +51,14 @@ ColorPicker.Picker = (function($){
         return setRGB(h,s,v);
     };      
       
+    this.resetHex = function(){
+        typingHex();
+    };  
+      
     var setEvents = function(){
         $(window).on('mousedown mouseup', function(e) {
             this.mousedown = (e.type === 'mousedown') ? 1 : 0;
         });  
-        areaHex.blur(hexOnBlur);
         setArea(areaH, locH, eventOnHue);
         setArea(areaSV, locSV, eventOnSaturationValue);
     },  
@@ -158,8 +161,8 @@ ColorPicker.Picker = (function($){
         return v;
     },
   
-    hexOnBlur= function(){
-        var newHex = areaHex.val(), 
+    typingHex = function(){
+        var newHex = areaHex[0].innerHTML, 
             hexLength = newHex.length,
             tmp, m;
         if(hexLength === 3 || hexLength === 6){
@@ -178,8 +181,7 @@ ColorPicker.Picker = (function($){
             resultSpot.css('background-color', '#'+newHex);
             moveBackPointers(); 
 //            console.log('h:'+locH.y+', s:'+locSV.y+', v:'+locSV.x);
-        } else 
-            alert("Please enter valid hex number of color!");
+        } 
     },   
         
     changeBackground= function(h){
@@ -202,7 +204,7 @@ ColorPicker.Picker = (function($){
 
     getResult = function(){
         resultSpot.css('background-color', '#'+hex);
-        areaHex.val(hex);
+        areaHex[0].innerHTML = hex;
     },        
         
     moveSaturationValuePointer = function(){

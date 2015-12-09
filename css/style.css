@@ -89,6 +89,17 @@ body{
     border-style: solid;
 }
 
+#colorHash{
+    display: inline-block;
+    min-height: 2em;
+    background-color: #fff;
+    color: #444;
+    padding: .3em;
+    border-radius: 2px;
+}
+#colorHash:hover{
+    cursor: pointer;
+}
 .buttons {
     padding: 0.5em 0.4em;
     margin: auto;

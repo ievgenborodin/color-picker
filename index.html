@@ -6,6 +6,7 @@
   <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
+  <link href="css/input.css" rel="stylesheet" />
   <script src="js/lib/modernizr.js"></script>
   <script src="js/app.js"></script>
 </head>
@@ -60,7 +61,7 @@
                             <span id="colorSpot"></span>
                         </div>
                         <div class="buttons divHash">
-                            #<input type="text" id="colorHash" />;
+                            #<span id="colorHash">000000</span>;
                         </div>
                     </div>
                 </div>
@@ -74,6 +75,15 @@
         </div>
     </div>
 </div>    
+
+ <div id="input-wrap">
+    <div id="input">
+      <div title="Done" id="input-close">&#10003;</div>
+      <div class="brow" id="input-buttons">
+        <div title="Backspace" id="input-backspace">&larr;</div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
