@@ -11,4 +11,4 @@
 ![Preview screen](/scr.jpg)
 
 ## Link
-http://feverart.com/mycolorpicker/
+http://ievgenborodin.com/apps/colorpicker
